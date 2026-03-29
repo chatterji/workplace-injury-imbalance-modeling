@@ -1,0 +1,6 @@
+method,threshold,accuracy,precision,recall,roc_auc,pr_auc,true_negatives,false_positives,false_negatives,true_positives,business_interpretation
+baseline,0.5,0.9370893836021423,0.0,0.0,0.6936240792274475,0.1334417760372162,20824,0,1398,0,High accuracy but failed to identify any injury claims at the default threshold.
+threshold_tuned_baseline,0.1,,0.16363636363636364,0.26394849785407726,,0.1334417760372162,18938,1886,1029,369,"Improved injury-claim detection by lowering the threshold, but increased false positives."
+threshold_tuned_baseline,0.01,,0.06631148320806773,0.9971387696709585,,0.1334417760372162,1196,19628,4,1394,"Nearly all injury claims were detected, but at an operationally expensive false-positive rate."
+class_weighted,0.5,0.6288812756538391,0.10323253273963928,0.6373390555381775,0.6797428131103516,0.11824434995651245,13084,7740,507,891,"Substantially improved recall relative to baseline, showing better sensitivity to rare injury claims."
+oversampled,0.5,0.6260462403297424,0.10664694011211395,0.6702432036399841,0.7169183492660522,0.14376665651798248,12975,7849,461,937,"Best overall minority-class performance in the notebook run, with the strongest PR AUC and recall among the main methods."

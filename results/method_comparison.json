@@ -1,0 +1,72 @@
+[
+  {
+    "method": "baseline",
+    "threshold": 0.5,
+    "accuracy": 0.9370893836021423,
+    "precision": 0.0,
+    "recall": 0.0,
+    "roc_auc": 0.6936240792274475,
+    "pr_auc": 0.1334417760372162,
+    "true_negatives": 20824,
+    "false_positives": 0,
+    "false_negatives": 1398,
+    "true_positives": 0,
+    "business_interpretation": "High accuracy but failed to identify any injury claims at the default threshold."
+  },
+  {
+    "method": "threshold_tuned_baseline",
+    "threshold": 0.1,
+    "accuracy": null,
+    "precision": 0.16363636363636364,
+    "recall": 0.26394849785407726,
+    "roc_auc": null,
+    "pr_auc": 0.1334417760372162,
+    "true_negatives": 18938,
+    "false_positives": 1886,
+    "false_negatives": 1029,
+    "true_positives": 369,
+    "business_interpretation": "Improved injury-claim detection by lowering the threshold, but increased false positives."
+  },
+  {
+    "method": "threshold_tuned_baseline",
+    "threshold": 0.01,
+    "accuracy": null,
+    "precision": 0.06631148320806773,
+    "recall": 0.9971387696709585,
+    "roc_auc": null,
+    "pr_auc": 0.1334417760372162,
+    "true_negatives": 1196,
+    "false_positives": 19628,
+    "false_negatives": 4,
+    "true_positives": 1394,
+    "business_interpretation": "Nearly all injury claims were detected, but at an operationally expensive false-positive rate."
+  },
+  {
+    "method": "class_weighted",
+    "threshold": 0.5,
+    "accuracy": 0.6288812756538391,
+    "precision": 0.10323253273963928,
+    "recall": 0.6373390555381775,
+    "roc_auc": 0.6797428131103516,
+    "pr_auc": 0.11824434995651245,
+    "true_negatives": 13084,
+    "false_positives": 7740,
+    "false_negatives": 507,
+    "true_positives": 891,
+    "business_interpretation": "Substantially improved recall relative to baseline, showing better sensitivity to rare injury claims."
+  },
+  {
+    "method": "oversampled",
+    "threshold": 0.5,
+    "accuracy": 0.6260462403297424,
+    "precision": 0.10664694011211395,
+    "recall": 0.6702432036399841,
+    "roc_auc": 0.7169183492660522,
+    "pr_auc": 0.14376665651798248,
+    "true_negatives": 12975,
+    "false_positives": 7849,
+    "false_negatives": 461,
+    "true_positives": 937,
+    "business_interpretation": "Best overall minority-class performance in the notebook run, with the strongest PR AUC and recall among the main methods."
+  }
+]
