@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data and private files
+data/private/
+*.csv
+!data/README.md
+
+# Results and model artifacts
+results/*.png
+results/*.csv
+results/*.json
+results/*.keras
+results/*.h5
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
